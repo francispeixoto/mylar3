@@ -225,7 +225,7 @@ div#shutdown{ text-align: center; vertical-align: middle; }
   .manage_wrapper {
     width: 95%;
     padding: 15px;
-    margin: 15px auto 0 auto;
+    margin: 15px auto 0;
   }
 
   /* Stack left/right wrappers vertically */
@@ -291,7 +291,7 @@ div#shutdown{ text-align: center; vertical-align: middle; }
   .manage_wrapper {
     width: 98%;
     padding: 10px;
-    margin: 10px auto 0 auto;
+    margin: 10px auto 0;
   }
 
   .table_wrapper_left,
