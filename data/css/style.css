@@ -103,9 +103,9 @@ a.blue {
 
 container {  }
 
-body { background-color: #EBF4FB; min-width: 935px; }
+body { background-color: #EBF4FB; }
 
-header { min-height: 68px; width: 100%; min-width: 935px; padding-left: 0px; padding-right: 10px; background-color: #CDC9C9; position: fixed; z-index: 998; }
+header { min-height: 68px; width: 100%; padding-left: 0px; padding-right: 10px; background-color: #CDC9C9; position: fixed; z-index: 998; }
 
 h1 { font-size: 24px; }
 h2 { font-size: 20px; }
@@ -116,7 +116,7 @@ p.indented { padding-top: 20px; margin-left: 20px; font-size: 14px; }
 p.center { text-align: center; font-size: 18px; }
 .smalltext2 { font-size: 12px; margin-left: 45px; }
 
-div#updatebar { text-align: center; min-width: 970px; width: 100%; background-color: light-blue; float: left; }
+div#updatebar { text-align: center; width: 100%; background-color: light-blue; float: left; }
 div#logo { float: left; padding-left: 10px; }
 
 ul#nav { margin: 25px 0 0 0; float: left; list-style-type: none; }
@@ -216,17 +216,216 @@ div#shutdown{ text-align: center; vertical-align: middle; }
 .clearfix { zoom: 1; }
 
 
+/* Responsive Design - Tablet and Mobile Devices */
+
+/* Tablet devices (768px and below) */
+@media screen and (max-width: 768px) {
+  /* Make tables and wrappers full width */
+  .table_wrapper,
+  .manage_wrapper {
+    width: 95%;
+    padding: 15px;
+    margin: 15px auto 0 auto;
+  }
+
+  /* Stack left/right wrappers vertically */
+  .table_wrapper_left,
+  .table_wrapper_right {
+    width: 90%;
+    float: none;
+    margin: 15px auto;
+  }
+
+  /* Adjust navigation */
+  ul#nav {
+    margin: 20px 0 0 0;
+  }
+
+  ul#nav li {
+    margin: 30px 5px auto 5px;
+  }
+
+  ul#nav li a {
+    padding: 3px;
+    font-size: 14px;
+  }
+
+  /* Make search bar responsive */
+  div#searchbar {
+    margin: 20px 10px auto auto;
+  }
+
+  div#searchbar input[type="text"] {
+    width: 120px;
+  }
+
+  /* Adjust logo size */
+  div#logo img {
+    max-width: 150px;
+    height: auto;
+  }
+
+  /* Adjust main content padding */
+  div#main {
+    padding: 100px 0 0 0;
+  }
+
+  /* Adjust table column widths */
+  .configtable td {
+    width: auto;
+    padding: 5px;
+  }
+
+  .comictable td#mainimg,
+  .comictable td#maindetails {
+    width: auto;
+  }
+}
+
+/* Mobile devices (480px and below) */
+@media screen and (max-width: 480px) {
+  html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; }
+
+  /* Make wrappers full width on mobile */
+  .table_wrapper,
+  .manage_wrapper {
+    width: 98%;
+    padding: 10px;
+    margin: 10px auto 0 auto;
+  }
+
+  .table_wrapper_left,
+  .table_wrapper_right {
+    width: 95%;
+    padding: 15px;
+  }
+
+  /* Stack navigation vertically */
+  header {
+    min-height: auto;
+    padding-bottom: 10px;
+  }
+
+  div#logo {
+    float: none;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  div#logo img {
+    max-width: 120px;
+    height: auto;
+  }
+
+  ul#nav {
+    float: none;
+    text-align: center;
+    margin: 10px 0;
+    padding: 0;
+  }
+
+  ul#nav li {
+    display: block;
+    margin: 5px auto;
+    padding: 5px 0;
+  }
+
+  ul#nav li a {
+    display: block;
+    padding: 8px;
+    font-size: 16px;
+  }
+
+  /* Make search bar full width */
+  div#searchbar {
+    float: none;
+    margin: 10px auto;
+    text-align: center;
+    width: 90%;
+  }
+
+  div#searchbar input[type="text"] {
+    width: 60%;
+    max-width: 200px;
+  }
+
+  div#searchbar input[type="submit"] {
+    width: auto;
+  }
+
+  /* Adjust main content for mobile */
+  div#main {
+    padding: 20px 0 0 0;
+  }
+
+  /* Adjust headings */
+  div#paddingheader,
+  div#paddingheadertitle,
+  div#nopaddingheader {
+    font-size: 18px;
+    padding-top: 15px;
+  }
+
+  h1 { font-size: 20px; }
+  h2 { font-size: 18px; }
+  h3 { font-size: 16px; }
+  h4 { font-size: 14px; }
+
+  /* Make tables scrollable on mobile */
+  .table_wrapper {
+    overflow-x: auto;
+  }
+
+  /* Adjust table minimum widths for mobile */
+  table#searchresults_table th#name,
+  table#searchresults_table td#name {
+    min-width: 200px;
+  }
+
+  table#log_table th#message {
+    min-width: 250px;
+  }
+
+  /* Footer adjustments */
+  footer {
+    margin: 10px auto;
+  }
+
+  div#actions small {
+    font-size: 11px;
+  }
+}
+
+/* Very small mobile devices (320px and below) */
+@media screen and (max-width: 320px) {
+  div#logo img {
+    max-width: 100px;
+  }
+
+  ul#nav li a {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  div#searchbar input[type="text"] {
+    width: 100%;
+    max-width: 180px;
+  }
+
+  .table_wrapper,
+  .manage_wrapper {
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+  }
+}
+
 @media all and (orientation:portrait) {
 
 }
 
 @media all and (orientation:landscape) {
 
-}
-
-@media screen and (max-device-width: 480px) {
-
-  html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; }
 }
 
 
